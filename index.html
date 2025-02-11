@@ -1,28 +1,6 @@
-#成功値の決定
-success_number = input('成功値を入力してください')
-success_number = float(success_number)
-
-#文字色
-import re
-RED = '\033[31m'
-BLUE = '\033[34m'
-BG_MAZENTA = '\033[45m'
-BG_CYAN = '\033[46m'
-RESET = '\033[0m'
-
-#ダイスロール
-import random
-dice_roll = random.randint(1,100)
-print(dice_roll)
-if success_number<dice_roll<96:
-  print('\033[31m'+'失敗'+'\033[0m')
-elif dice_roll <= 5 :
-  print('\033[34m'+'\033[46m'+'決定的成功'+'\033[0m')
-elif dice_roll<=(success_number/5):
-  print(BLUE+'スペシャル'+RESET)
-elif 5<dice_roll<=success_number :
-  print('\033[34m'+'成功'+'\033[0m')
-elif dice_roll>=96:
-  print('\033[31m'+'\033[45m'+'致命的失敗'+'\033[0m')
-else:
-  print('エラー')
+<!DOCTYPE html>
+<html>
+  <head>
+    <tytle>ダイスロール</tytle>
+  </head>
+</html>
