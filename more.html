@@ -1,8 +1,44 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <h1>やぁ！もっと知りたいって言ってくれてありがとう！！</h1>
-    <p>僕たちは君を歓迎するよ！</p>
-    <p>たちって言っても独りだけどね！！！</p>
+<script>
+//成功値の決定
+let success_number = prompt('成功値を入力してください：');
+
+//Hello world
+document.write("ダイスロール<b><br>");
+
+//ダイスロール
+var dice_roll = Math.floor( Math.random() * 100 ) + 1;
+
+//ダイスロールの値を固定
+//var dice_roll = 100
+
+document.write(dice_roll+"<br>");
+
+//ファンブルの値
+if(96<=Number(success_number)){
+var fumble = success_number
+}else{
+var fumble = 95
+}
+
+//成否判定
+if(Number(fumble)<Number(dice_roll)){
+document.write("致命的失敗".fontcolor("red"))
+}else if(Number(success_number)<Number(dice_roll)){
+document.write("失敗".fontcolor("red"))
+}else if(Number(dice_roll)<=5){
+document.write("決定的成功".fontcolor("blue"))
+}else if(Number(dice_roll)<=Number(success_number)/5){
+document.write("スペシャル".fontcolor("blue"))
+}else if(Number(dice_roll)<=Number(success_number)){
+document.write("成功".fontcolor("blue"))
+}else{
+document.write("エラー")
+}
+
+
+</script>
   </body>
 </html>
