@@ -1,69 +1,24 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <div class = "sbox"> 
-<div class = "sbox-inner"> 
-<input type="text" id="searchbox" placeholder="検索キーワードを入力">
-<button id="searchbutton">検索</button>
-</div>
-</div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ダイスロール</title>
+</head>
+<body style="padding: 100px;">
 
-<style>
-.sbox {
-border: 3px solid #CCCCCC;
-    padding: 10px 10px;
-}
+  <h1>ダイスロール</h1>
+  <br>
+  <br>
+  <p>◇1D2</p>
+ <button onclick="buttonClick1()">ボタン</button>
+  <p id="1d2"></p>
 
-.sbox-inner {
-    display: flex;
-}
-.sbox-inner input#searchbox {
-    flex: auto;
-}
-</style>
+  <script type="text/javascript" src="1d2.js"></script>
 
-<script>
-document.getElementById('searchbutton').addEventListener('click', function() {
-    var input = document.getElementById('searchbox').value.toLowerCase();
-    if (!input) return; // 空の入力を無視します。
-    if(input"ダイスロール"){
-      <a href="more.html">ダイスロール</a>;
+<p>◇1D100</p>
+  <button onclick="buttonClick2()">ボタン</button>
+  <p id="test"></p>
 
-    var elements = document.querySelectorAll('p, td, th, h3'); // 検索対象の要素を選択します
-    var found = false; // マッチした要素が見つかったかどうかのフラグ
-
-    elements.forEach(element => {
-        if (element.querySelector("span.search-highlight")) {
-            element.innerHTML = element.textContent; // 以前の検索結果をリセット
-        }
-
-        var text = element.textContent.toLowerCase();
-        var index = text.indexOf(input);
-
-        if (index >= 0 && !found) {
-            found = true;
-            element.scrollIntoView({ behavior: 'smooth', block: 'center' }); // 要素を画面の中央にスクロールします
-        }
-
-        const regex = new RegExp(`(${input})`, 'gi');
-        element.innerHTML = element.innerHTML.replace(regex, '<span style="background-color: #ffe46f;">$1</span>'); // ハイライトを適用します
-    });
-});
-</script>
- <h1>タイトル</h1>
-　<h2>目次</h2>
-　　<ul>
-　　　<li><a href="#1">はじめに</a></li>
-　　　<li><a href="#2">課題と解決策</a></li>
-　　　<li><a href="#3">まとめ</a></li>
-　　</ul>
-　<h2 id="1">はじめに</h2>
-　　<p>はじめの文章</p>
-　<h2 id="2">課題と解決策</h2>
-　　<p>課題と解決策の文章</p>
-　<h2 id="3">まとめ</h2>
-　　<p>まとめの文章</p>
-  <a href="more.html">ダイスロール</a>
-  <a href="test.html">test</a>
-  </body>
+  <script type="text/javascript" src="sample.js"></script>
+</body>
 </html>
