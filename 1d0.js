@@ -24,10 +24,13 @@ var success = ("決定的成功")
 var success = ("スペシャル")
 }else if(Number(dice_roll)<=Number(success_number)){
 var success = ("成功")
+}else if(Number(dice_roll)===Null{
+ var success = ("エラー")
 }else{
 var success = ("エラー")
 }
  //pタグに文字列セット
  p1.textContent="1D100>>>"+dice_roll+" "+"(1d100<="+success_number+" "+success+")"
+
 
 }
